@@ -1,0 +1,37 @@
+POST Method
+https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
+{"status":"OK","place_id":"42ab76d9edfb28d5885329c582fcb11e","scope":"APP","reference":"bb885ff2dd5f555826066d8f521bc484bb885ff2dd5f555826066d8f521bc484","id":"bb885ff2dd5f555826066d8f521bc484"}
+SUCCESS , Status code: 200
+All required data is present
+status Value is VALID
+POST-GET Method
+https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=42ab76d9edfb28d5885329c582fcb11e
+{"location":{"latitude":"-38.383494","longitude":"33.427362"},"accuracy":"50","name":"Frontline house","phone_number":"(+91) 983 893 3937","address":"29, side layout, cohen 09","types":"shoe park,shop","website":"http:\/\/google.com","language":"French-IN"}
+SUCCESS , Status code: 200
+All required data is present
+address Value is VALID
+PUT Method
+https://rahulshettyacademy.com/maps/api/place/update/json?key=qaclick123
+{"msg":"Address successfully updated"}
+SUCCESS , Status code: 200
+All required data is present
+msg Value is VALID
+PUT-GET Method
+https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=42ab76d9edfb28d5885329c582fcb11e
+{"location":{"latitude":"-38.383494","longitude":"33.427362"},"accuracy":"50","name":"Frontline house","phone_number":"(+91) 983 893 3937","address":"858 Roserail Dr, US","types":"shoe park,shop","website":"http:\/\/google.com","language":"French-IN"}
+SUCCESS , Status code: 200
+All required data is present
+address Value is VALID
+DELETE Method
+https://rahulshettyacademy.com/maps/api/place/delete/json?key=qaclick123
+{"status":"OK"}
+SUCCESS , Status code: 200
+All required data is present
+status Value is VALID
+DELETE-GET Method
+https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=42ab76d9edfb28d5885329c582fcb11e
+{"msg":"Get operation failed, looks like place_id  doesn't exists"}
+SUCCESS , Status code: 404
+All required data is present
+msg Value is VALID
+Creating, Changing, Deletion of new location ended
