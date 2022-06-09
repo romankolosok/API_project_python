@@ -37,6 +37,8 @@ class Google_maps_api():
 
         return result_post
 
+    """Method for checking new location"""
+
     @staticmethod
     def get_new_place(place_id):
 
@@ -48,4 +50,46 @@ class Google_maps_api():
         print(result_get.text)
 
         return result_get
+
+    """Method for updating new location"""
+
+    @staticmethod
+    def put_new_place(place_id):
+
+        json_for_update_new_location = {
+            "place_id": place_id,
+            "address": "858 Roserail Dr, US",
+            "key": "qaclick123"
+
+        }
+
+        put_resource = "/maps/api/place/update/json"
+        put_url = base_url + put_resource + request_key
+        print(put_url)
+
+        result_put = Http_method.put(put_url,json_for_update_new_location)
+        print(result_put.text)
+
+        return result_put
+
+    """Delete new place"""
+
+    @staticmethod
+    def del_new_place(place_id):
+
+        json_del_new_place = {
+            "place_id": place_id
+        }
+
+        del_resource = "/maps/api/place/delete/json"
+        del_url = base_url + del_resource + request_key
+        print(del_url)
+
+        result_del = Http_method.delete(del_url,json_del_new_place)
+        print(result_del.text)
+
+        return result_del
+
+
+
 
