@@ -34,4 +34,18 @@ class Google_maps_api():
 
         result_post = Http_method.post(post_url, json_for_new_place_creation)
         print(result_post.text)
+
         return result_post
+
+    @staticmethod
+    def get_new_place(place_id):
+
+        get_resource = "/maps/api/place/get/json"
+        get_url = base_url + get_resource + request_key + "&place_id=" + place_id
+        print(get_url)
+
+        result_get = Http_method.get(get_url)
+        print(result_get.text)
+
+        return result_get
+
